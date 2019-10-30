@@ -2,21 +2,60 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+#content {
+  height: 400px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#header-text {
+  font-size: 25px;
 }
 
-.App-link {
-  color: #09d3ac;
+#current-verb {
+  font-size: 25px;
+  color: #007bff;
+}
+
+.verb-icon {
+    cursor: pointer;
+    color: #007bff;
+}
+
+.verb-form {
+  height: 30px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.verb-elem-text {
+    font-size: 15px;
+}
+
+.verb-elem-answer {
+    color: #007bff;
+}
+
+.verb-elem-type {
+    min-width: 110px;
+}
+
+.verb-variant-item {
+    margin: 2px;
+}
+
+#verb-card {
+  height: 300px;
+  min-width: 310px;
+}
+
+#verb-list {
+    margin-top: -20px;
+}
+
+@media (max-width: 540px) {
+  #header-text {
+      font-size: 20px;
+  }
+  .verb-elem-text {
+      font-size: 13px;
+  }
 }
