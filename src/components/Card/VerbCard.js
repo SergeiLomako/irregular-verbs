@@ -1,8 +1,15 @@
-import React from "react";
-import { Button, Card, Container, Row } from "react-bootstrap";
-import VerbType from "./VerbType"
+import React, { useContext } from 'react';
+import { StoreContext } from '../../context/storeContext';
+import { Button, Card, Container, Row } from 'react-bootstrap';
+import { getNextVerb } from '../../helpers/getNextVerb';
+import VerbType from './VerbType';
 
-export default (props) => {
+export default () => {
+  const { setNextVerb, currentVerb, verbs, shownVerbs } = useContext(StoreContext);
+  const handleNextButtonClick = (e) => {
+    e.preventDefault();
+    return setNextVerb(getNextVerb(verbs, shownVerbs))
+  };
   return (
     <Container className="d-flex align-items-center flex-column mt-5" id="content">
       <Row>
@@ -11,15 +18,19 @@ export default (props) => {
               border="primary"
         >
           <Card.Header>
-            <span id="current-verb">VERB</span>
+            <span id="current-verb" className="text-uppercase">{ currentVerb.title }</span>
           </Card.Header>
           <Card.Body className="d-flex align-items-center flex-column">
-            <VerbType type="infinite" answer="Test123" />
-            <VerbType type="simplePast" answer="Test1234" />
-            <VerbType type="pastParticiple" answer="Test12345" />
+            <VerbType type="infinite" />
+            <VerbType type="simplePast" />
+            <VerbType type="pastParticiple" />
           </Card.Body>
           <Card.Footer>
-            <Button variant="primary">Next</Button>
+            <Button variant="primary"
+                    onClick={ handleNextButtonClick }
+            >
+              Next
+            </Button>
           </Card.Footer>
         </Card>
       </Row>

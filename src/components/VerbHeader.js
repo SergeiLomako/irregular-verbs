@@ -1,10 +1,17 @@
-import React from "react";
-import { Button, Navbar } from "react-bootstrap";
-import logo from "../logo.png";
+import React, { useContext } from 'react';
+import { StoreContext } from '../context/storeContext';
+import { Button, Navbar } from 'react-bootstrap';
+import logo from '../logo.png';
 
-export default (props) => {
+
+export default () => {
+  const { toggleVerbsListVisibility, isVisibleList, ref } = useContext(StoreContext);
   return (
-    <Navbar bg="light" variant="light" className="d-flex align-items-center flex-column">
+    <Navbar className="d-flex align-items-center flex-column"
+            variant="light"
+            bg="light"
+            ref={ref}
+    >
       <Navbar.Brand>
         <img
           alt="logo"
@@ -16,8 +23,11 @@ export default (props) => {
               Learning irregular verbs
             </span>
       </Navbar.Brand>
-      <Button variant="outline-primary" type="button">
-        Show verbs
+      <Button variant="outline-primary"
+              type="button"
+              onClick={toggleVerbsListVisibility}
+      >
+        { isVisibleList ? 'Hide verbs' : 'Show verbs' }
       </Button>
     </Navbar>
   )
