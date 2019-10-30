@@ -2,7 +2,7 @@
   "name": "irregular-verbs",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sergeilomako.github.io/irregular-verbs",
+  "homepage": "https://sergeilomako.github.io/irregular-verbs/",
   "dependencies": {
     "react": "^16.11.0",
     "react-bootstrap": "^1.0.0-beta.14",
