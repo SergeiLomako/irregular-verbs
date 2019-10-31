@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
-import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { FaCheck } from 'react-icons/fa';
+import { GoX } from "react-icons/go";
+import { Form } from 'react-bootstrap';
 import { StoreContext } from '../../context/storeContext';
 
 const types = {
@@ -9,18 +11,57 @@ const types = {
 };
 
 export default ({ type }) => {
-  const { changeTypeVisibility, isShowTypes, currentVerb } = useContext(StoreContext);
-  const iconClasses = 'verb-icon ml-auto';
-  const answerClasses = `verb-elem-text verb-elem-answer ${ !isShowTypes[type] && 'd-none' }`;
-  const handleClick = () => changeTypeVisibility(type);
+  const {
+    setCorrectAnswerFlag,
+    isCorrectAnswers,
+    setTouchedFlag,
+    setAnswerValue,
+    currentVerb,
+    answers,
+  } = useContext(StoreContext);
+
+  const handleBlur = () => {
+    if (answers[type]) {
+      setTouchedFlag(type)
+    }
+  };
+
+  const handleChange = (e) => {
+    const { value } = e.target;
+    setAnswerValue(type, value);
+    setCorrectAnswerFlag(type, currentVerb[type] === value)
+  };
+
+  let icon = null;
+  let inputBorderColor = 'primary';
+
+  if (answers[type] && isCorrectAnswers[type]) {
+    icon = <FaCheck className="verb-icon ml-1 text-success" />;
+    inputBorderColor = 'success';
+  }
+
+  if (answers[type] && !isCorrectAnswers[type]) {
+    icon = <GoX className="verb-icon ml-1 text-warning" />;
+    inputBorderColor = 'warning';
+  }
+
+  if (!answers[type]) {
+    icon = null;
+    inputBorderColor = 'primary'
+  }
+
   return (
-    <div className="verb-form border border-primary rounded d-flex align-items-center justify-content-start w-100">
+    <div className="verb-form d-flex align-items-center justify-content-start w-100">
+
+
       <span className="verb-elem-text verb-elem-type text-left">{ types[type] }</span>
-      <span className={answerClasses}>{ currentVerb[type] }</span>
-      {isShowTypes[type] ?
-        <FaEyeSlash className={iconClasses} onClick={ handleClick } /> :
-        <FaEye className={iconClasses} onClick={ handleClick } />
-      }
+      <Form.Control type="text"
+                    className={`border-${inputBorderColor} answer-input`}
+                    onBlur={handleBlur}
+                    onChange={handleChange}
+                    value={answers[type]}
+      />
+      {icon}
     </div>
   )
 }

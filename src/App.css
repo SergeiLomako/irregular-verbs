@@ -59,6 +59,12 @@
     width: 310px;
 }
 
+.answer-input {
+    width: 120px;
+    height: 20px;
+    color: #007bff;
+}
+
 @media (max-width: 540px) {
   #header-text {
       font-size: 20px;

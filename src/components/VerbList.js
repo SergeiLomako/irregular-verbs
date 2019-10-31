@@ -3,11 +3,11 @@ import { Button, Navbar } from 'react-bootstrap';
 import { StoreContext } from '../context/storeContext';
 
 export default () => {
-  const { isVisibleList, verbs, currentVerb, setVerb, ref } = useContext(StoreContext);
+  const { isVisibleList, verbs, currentVerb, setVerb, headerRef } = useContext(StoreContext);
   const handleClick = (e) => {
     e.preventDefault();
     const currentVerb = verbs.find(({ title }) => title === e.currentTarget.textContent);
-    ref.current.scrollIntoView({
+    headerRef.current.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
     });

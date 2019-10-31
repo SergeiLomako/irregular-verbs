@@ -5,12 +5,12 @@ import logo from '../logo.png';
 
 
 export default () => {
-  const { toggleVerbsListVisibility, isVisibleList, ref } = useContext(StoreContext);
+  const { toggleVerbsListVisibility, isVisibleList, headerRef } = useContext(StoreContext);
   return (
     <Navbar className="d-flex align-items-center flex-column"
             variant="light"
             bg="light"
-            ref={ref}
+            ref={headerRef}
     >
       <Navbar.Brand>
         <img

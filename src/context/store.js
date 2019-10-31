@@ -5,21 +5,39 @@ import { getRandomInt } from '../helpers/getNextVerb';
 import verbs from './verbs';
 import {
   TOGGLE_VERBS_LIST_VISIBILITY,
+  SET_CORRECT_ANSWER_FLAG,
   CHANGE_TYPE_VISIBILITY,
+  SET_TOUCHED_FLAG,
   SET_SEARCH_VALUE,
+  SET_ANSWER_VALUE,
   SET_NEXT_VERB,
   SET_VERB
 } from './types'
 
 export const Store = ({children}) => {
-  const ref = React.createRef();
+  const headerRef = React.createRef();
   const currentVerb = verbs[getRandomInt(verbs.length)];
   const initialState = {
-    ref,
     verbs,
+    headerRef,
     currentVerb,
     search: '',
     isVisibleList: false,
+    answers: {
+      infinite: '',
+      simplePast: '',
+      pastParticiple: ''
+    },
+    isCorrectAnswers: {
+      infinite: false,
+      simplePast: false,
+      pastParticiple: false
+    },
+    isTouched: {
+      infinite: false,
+      simplePast: false,
+      pastParticiple: false
+    },
     isShowTypes: {
       infinite: false,
       simplePast: false,
@@ -44,6 +62,21 @@ export const Store = ({children}) => {
     payload: { search }
   });
 
+  const setAnswerValue = (type, value) => dispatch({
+    type: SET_ANSWER_VALUE,
+    payload: { type, value }
+  });
+
+  const setCorrectAnswerFlag = (type, value) => dispatch({
+    type: SET_CORRECT_ANSWER_FLAG,
+    payload: { type, value }
+  });
+
+  const setTouchedFlag = (type) => dispatch({
+    type: SET_TOUCHED_FLAG,
+    payload: { type }
+  });
+
   const toggleVerbsListVisibility = () => dispatch({ type: TOGGLE_VERBS_LIST_VISIBILITY });
 
   const changeTypeVisibility = (verbType) => dispatch({
@@ -56,7 +89,10 @@ export const Store = ({children}) => {
       ...state,
       toggleVerbsListVisibility,
       changeTypeVisibility,
+      setCorrectAnswerFlag,
       setSearchValue,
+      setAnswerValue,
+      setTouchedFlag,
       setNextVerb,
       setVerb
     }}>
