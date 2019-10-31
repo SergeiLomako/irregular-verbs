@@ -288,7 +288,7 @@ export default [
     pastParticiple: 'lost'
   },
   {
-    title: 'делать',
+    title: 'сделать',
     infinite: 'make',
     simplePast: 'made',
     pastParticiple: 'made'

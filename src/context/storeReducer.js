@@ -1,8 +1,9 @@
 import {
   TOGGLE_VERBS_LIST_VISIBILITY,
   CHANGE_TYPE_VISIBILITY,
-  SET_VERB_FROM_LIST,
-  SET_NEXT_VERB
+  SET_SEARCH_VALUE,
+  SET_NEXT_VERB,
+  SET_VERB
 } from './types'
 
 const handlers = {
@@ -13,6 +14,7 @@ const handlers = {
     return {
       ...state,
       shownVerbs,
+      hasError: false,
       isShowTypes: {
         infinite: false,
         simplePast: false,
@@ -32,15 +34,20 @@ const handlers = {
       [verbType]: !state.isShowTypes[verbType]
     }
   }),
-  [SET_VERB_FROM_LIST]: (state, { payload: { currentVerb } }) => ({
+  [SET_VERB]: (state, { payload: { currentVerb } }) => ({
     ...state,
     currentVerb,
+    hasError: false,
     isShowTypes: {
       infinite: false,
       simplePast: false,
       pastParticiple: false
     },
     shownVerbs: [currentVerb.title]
+  }),
+  [SET_SEARCH_VALUE]: (state, { payload: { search } }) => ({
+    ...state,
+    search
   }),
   DEFAULT: state => state
 };

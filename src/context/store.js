@@ -6,8 +6,9 @@ import verbs from './verbs';
 import {
   TOGGLE_VERBS_LIST_VISIBILITY,
   CHANGE_TYPE_VISIBILITY,
-  SET_VERB_FROM_LIST,
-  SET_NEXT_VERB
+  SET_SEARCH_VALUE,
+  SET_NEXT_VERB,
+  SET_VERB
 } from './types'
 
 export const Store = ({children}) => {
@@ -17,6 +18,7 @@ export const Store = ({children}) => {
     ref,
     verbs,
     currentVerb,
+    search: '',
     isVisibleList: false,
     isShowTypes: {
       infinite: false,
@@ -32,9 +34,14 @@ export const Store = ({children}) => {
     payload: { nextVerb }
   });
 
-  const setVerbFromList = (currentVerb) => dispatch({
-    type: SET_VERB_FROM_LIST,
+  const setVerb = (currentVerb) => dispatch({
+    type: SET_VERB,
     payload: { currentVerb }
+  });
+
+  const setSearchValue = (search) => dispatch({
+    type: SET_SEARCH_VALUE,
+    payload: { search }
   });
 
   const toggleVerbsListVisibility = () => dispatch({ type: TOGGLE_VERBS_LIST_VISIBILITY });
@@ -49,8 +56,9 @@ export const Store = ({children}) => {
       ...state,
       toggleVerbsListVisibility,
       changeTypeVisibility,
-      setVerbFromList,
-      setNextVerb
+      setSearchValue,
+      setNextVerb,
+      setVerb
     }}>
       {children}
     </StoreContext.Provider>

@@ -1,18 +1,18 @@
 .App {
-  text-align: center;
-}
-
-#content {
-  height: 400px;
+    text-align: center;
 }
 
 #header-text {
-  font-size: 25px;
+    font-size: 25px;
 }
 
 #current-verb {
-  font-size: 25px;
-  color: #007bff;
+    font-size: 25px;
+    color: #007bff;
+}
+
+#card-header {
+    height: 60px;
 }
 
 .verb-icon {
@@ -21,9 +21,9 @@
 }
 
 .verb-form {
-  height: 30px;
-  margin: 5px;
-  padding: 5px;
+    height: 30px;
+    margin: 5px;
+    padding: 5px;
 }
 
 .verb-elem-text {
@@ -43,12 +43,20 @@
 }
 
 #verb-card {
-  min-height: 300px;
-  min-width: 310px;
+    min-height: 300px;
+    min-width: 310px;
 }
 
 #verb-list {
-    margin-top: -20px;
+    margin-top: 40px;
+}
+
+#search {
+    height: 80px;
+}
+
+#search-input {
+    width: 310px;
 }
 
 @media (max-width: 540px) {

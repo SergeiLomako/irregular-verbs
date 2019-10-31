@@ -3,7 +3,7 @@ import { Button, Navbar } from 'react-bootstrap';
 import { StoreContext } from '../context/storeContext';
 
 export default () => {
-  const { isVisibleList, verbs, currentVerb, setVerbFromList, ref } = useContext(StoreContext);
+  const { isVisibleList, verbs, currentVerb, setVerb, ref } = useContext(StoreContext);
   const handleClick = (e) => {
     e.preventDefault();
     const currentVerb = verbs.find(({ title }) => title === e.currentTarget.textContent);
@@ -11,7 +11,7 @@ export default () => {
       behavior: 'smooth',
       block: 'start',
     });
-    return setVerbFromList(currentVerb)
+    return setVerb(currentVerb)
   };
   return isVisibleList ? (
     <Navbar bg="light"
