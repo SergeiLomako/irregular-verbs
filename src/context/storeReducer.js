@@ -1,7 +1,7 @@
 import {
   TOGGLE_VERBS_LIST_VISIBILITY,
+  TOGGLE_ANSWER_VISIBILITY,
   SET_CORRECT_ANSWER_FLAG,
-  CHANGE_TYPE_VISIBILITY,
   SET_SEARCH_VALUE,
   SET_TOUCHED_FLAG,
   SET_ANSWER_VALUE,
@@ -28,35 +28,24 @@ const handlers = {
       ...resetAnswers,
       shownVerbs,
       hasError: false,
-      isShowTypes: {
-        infinite: false,
-        simplePast: false,
-        pastParticiple: false
-      },
+      isVisibleAnswers: false,
       currentVerb: nextVerb
     }
   },
-  [TOGGLE_VERBS_LIST_VISIBILITY]: ({ isVisibleList, ...rest }) => ({
-    ...rest,
-    isVisibleList: !isVisibleList
-  }),
-  [CHANGE_TYPE_VISIBILITY]: (state, { payload: { verbType } }) => ({
+  [TOGGLE_VERBS_LIST_VISIBILITY]: (state) => ({
     ...state,
-    isShowTypes: {
-      ...state.isShowTypes,
-      [verbType]: !state.isShowTypes[verbType]
-    }
+    isVisibleList: !state.isVisibleList
+  }),
+  [TOGGLE_ANSWER_VISIBILITY]: (state) => ({
+    ...state,
+    isVisibleAnswers: !state.isVisibleAnswers
   }),
   [SET_VERB]: (state, { payload: { currentVerb } }) => ({
     ...state,
     ...resetAnswers,
     currentVerb,
     hasError: false,
-    isShowTypes: {
-      infinite: false,
-      simplePast: false,
-      pastParticiple: false
-    },
+    isVisibleAnswers: false,
     shownVerbs: [currentVerb.title]
   }),
   [SET_SEARCH_VALUE]: (state, { payload: { search } }) => ({

@@ -59,6 +59,11 @@
     width: 310px;
 }
 
+#answers-block {
+    height: 65px;
+    width: 268px;
+}
+
 .answer-input {
     width: 120px;
     height: 20px;

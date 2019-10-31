@@ -5,8 +5,8 @@ import { getRandomInt } from '../helpers/getNextVerb';
 import verbs from './verbs';
 import {
   TOGGLE_VERBS_LIST_VISIBILITY,
+  TOGGLE_ANSWER_VISIBILITY,
   SET_CORRECT_ANSWER_FLAG,
-  CHANGE_TYPE_VISIBILITY,
   SET_TOUCHED_FLAG,
   SET_SEARCH_VALUE,
   SET_ANSWER_VALUE,
@@ -38,11 +38,7 @@ export const Store = ({children}) => {
       simplePast: false,
       pastParticiple: false
     },
-    isShowTypes: {
-      infinite: false,
-      simplePast: false,
-      pastParticiple: false
-    },
+    isVisibleAnswers: false,
     shownVerbs: [currentVerb.title]
   };
   const [state, dispatch] = useReducer(storeReducer, initialState);
@@ -79,16 +75,13 @@ export const Store = ({children}) => {
 
   const toggleVerbsListVisibility = () => dispatch({ type: TOGGLE_VERBS_LIST_VISIBILITY });
 
-  const changeTypeVisibility = (verbType) => dispatch({
-    type: CHANGE_TYPE_VISIBILITY,
-    payload: { verbType }
-  });
+  const toggleAnswerVisibility = () => dispatch({ type: TOGGLE_ANSWER_VISIBILITY });
 
   return (
     <StoreContext.Provider value={{
       ...state,
       toggleVerbsListVisibility,
-      changeTypeVisibility,
+      toggleAnswerVisibility,
       setCorrectAnswerFlag,
       setSearchValue,
       setAnswerValue,
