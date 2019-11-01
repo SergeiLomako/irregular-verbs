@@ -13,7 +13,7 @@ import {
 const resetAnswers = {
   answers: {
     infinite: '',
-    simplePast: '',
+    pastSimple: '',
     pastParticiple: ''
   }
 };

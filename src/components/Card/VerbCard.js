@@ -41,7 +41,7 @@ export default () => {
           </Card.Header>
           <Card.Body className="d-flex align-items-center flex-column">
             <VerbType type="infinite" />
-            <VerbType type="simplePast" />
+            <VerbType type="pastSimple" />
             <VerbType type="pastParticiple" />
             <div id="answers-block">
               <Button variant="primary"
@@ -55,7 +55,7 @@ export default () => {
                 { isVisibleAnswers && (
                   <>
                     <span className="text-primary">{currentVerb.infinite}</span>
-                    <span className="text-primary">{currentVerb.simplePast}</span>
+                    <span className="text-primary">{currentVerb.pastSimple}</span>
                     <span className="text-primary">{currentVerb.pastParticiple}</span>
                   </>
                 )}

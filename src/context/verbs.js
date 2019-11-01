@@ -2,553 +2,553 @@ export default [
   {
     title: 'быть',
     infinite: 'be',
-    simplePast: 'was, were',
+    pastSimple: 'was, were',
     pastParticiple: 'been'
   },
   {
     title: 'бить',
     infinite: 'beat',
-    simplePast: 'beat',
+    pastSimple: 'beat',
     pastParticiple: 'beaten'
   },
   {
     title: 'становиться',
     infinite: 'become',
-    simplePast: 'became',
+    pastSimple: 'became',
     pastParticiple: 'become'
   },
   {
     title: 'начинаться',
     infinite: 'begin',
-    simplePast: 'began',
+    pastSimple: 'began',
     pastParticiple: 'begun'
   },
   {
     title: 'дуть',
     infinite: 'blow',
-    simplePast: 'blew',
+    pastSimple: 'blew',
     pastParticiple: 'blown'
   },
   {
     title: 'ломать(ся)',
     infinite: 'break',
-    simplePast: 'broke',
+    pastSimple: 'broke',
     pastParticiple: 'broken'
   },
   {
     title: 'приносить',
     infinite: 'bring',
-    simplePast: 'brought',
+    pastSimple: 'brought',
     pastParticiple: 'brought'
   },
   {
     title: 'строить',
     infinite: 'build',
-    simplePast: 'built',
+    pastSimple: 'built',
     pastParticiple: 'built'
   },
   {
     title: 'гореть, жечь',
     infinite: 'burn',
-    simplePast: 'burnt',
+    pastSimple: 'burnt',
     pastParticiple: 'burnt'
   },
   {
     title: 'покупать',
     infinite: 'buy',
-    simplePast: 'bought',
+    pastSimple: 'bought',
     pastParticiple: 'bought'
   },
   {
     title: 'ловить, хватать',
     infinite: 'catch',
-    simplePast: 'caught',
+    pastSimple: 'caught',
     pastParticiple: 'caught'
   },
   {
     title: 'выбирать',
     infinite: 'choose',
-    simplePast: 'chose',
+    pastSimple: 'chose',
     pastParticiple: 'chosen'
   },
   {
     title: 'приходить',
     infinite: 'come',
-    simplePast: 'came',
+    pastSimple: 'came',
     pastParticiple: 'come'
   },
   {
     title: 'стоить',
     infinite: 'cost',
-    simplePast: 'cost',
+    pastSimple: 'cost',
     pastParticiple: 'cost'
   },
   {
     title: 'резать',
     infinite: 'cut',
-    simplePast: 'cut',
+    pastSimple: 'cut',
     pastParticiple: 'cut'
   },
   {
     title: 'делать',
     infinite: 'do',
-    simplePast: 'did',
+    pastSimple: 'did',
     pastParticiple: 'done'
   },
   {
     title: 'рисовать',
     infinite: 'draw',
-    simplePast: 'drew',
+    pastSimple: 'drew',
     pastParticiple: 'drawn'
   },
   {
     title: 'пить',
     infinite: 'drink',
-    simplePast: 'drank',
+    pastSimple: 'drank',
     pastParticiple: 'drunk'
   },
   {
     title: 'вести, гнать',
     infinite: 'drive',
-    simplePast: 'drove',
+    pastSimple: 'drove',
     pastParticiple: 'driven'
   },
   {
     title: 'есть, кушать',
     infinite: 'eat',
-    simplePast: 'ate',
+    pastSimple: 'ate',
     pastParticiple: 'eaten'
   },
   {
     title: 'падать',
     infinite: 'fall',
-    simplePast: 'fell',
+    pastSimple: 'fell',
     pastParticiple: 'fallen'
   },
   {
     title: 'чувствовать',
     infinite: 'feel',
-    simplePast: 'felt',
+    pastSimple: 'felt',
     pastParticiple: 'felt'
   },
   {
     title: 'сражаться',
     infinite: 'fight',
-    simplePast: 'fought',
+    pastSimple: 'fought',
     pastParticiple: 'fought'
   },
   {
     title: 'находить',
     infinite: 'find',
-    simplePast: 'found',
+    pastSimple: 'found',
     pastParticiple: 'found'
   },
   {
     title: 'летать',
     infinite: 'fly',
-    simplePast: 'flew',
+    pastSimple: 'flew',
     pastParticiple: 'flown'
   },
   {
     title: 'забывать',
     infinite: 'forget',
-    simplePast: 'forgot',
+    pastSimple: 'forgot',
     pastParticiple: 'forgotten'
   },
   {
     title: 'прощать',
     infinite: 'forgive',
-    simplePast: 'forgave',
+    pastSimple: 'forgave',
     pastParticiple: 'forgiven'
   },
   {
     title: 'замораживать',
     infinite: 'freeze',
-    simplePast: 'froze',
+    pastSimple: 'froze',
     pastParticiple: 'frozen'
   },
   {
     title: 'получать',
     infinite: 'get',
-    simplePast: 'got',
+    pastSimple: 'got',
     pastParticiple: 'got'
   },
   {
     title: 'давать',
     infinite: 'give',
-    simplePast: 'gave',
+    pastSimple: 'gave',
     pastParticiple: 'given'
   },
   {
     title: 'идти, ходить',
     infinite: 'go',
-    simplePast: 'went',
+    pastSimple: 'went',
     pastParticiple: 'gone'
   },
   {
     title: 'мочь',
     infinite: 'can',
-    simplePast: 'could',
+    pastSimple: 'could',
     pastParticiple: 'been able to'
   },
   {
     title: 'расти, становиться',
     infinite: 'grow',
-    simplePast: 'grew',
+    pastSimple: 'grew',
     pastParticiple: 'grown'
   },
   {
     title: 'вешать, висеть',
     infinite: 'hang',
-    simplePast: 'hung',
+    pastSimple: 'hung',
     pastParticiple: 'hung'
   },
   {
     title: 'иметь',
     infinite: 'have',
-    simplePast: 'had',
+    pastSimple: 'had',
     pastParticiple: 'had'
   },
   {
     title: 'слышать',
     infinite: 'hear',
-    simplePast: 'heard',
+    pastSimple: 'heard',
     pastParticiple: 'heard'
   },
   {
     title: 'поражать, попадать',
     infinite: 'hit',
-    simplePast: 'hit',
+    pastSimple: 'hit',
     pastParticiple: 'hit'
   },
   {
     title: 'держать',
     infinite: 'hold',
-    simplePast: 'held',
+    pastSimple: 'held',
     pastParticiple: 'held'
   },
   {
     title: 'хранить',
     infinite: 'keep',
-    simplePast: 'kept',
+    pastSimple: 'kept',
     pastParticiple: 'kept'
   },
   {
     title: 'знать',
     infinite: 'know',
-    simplePast: 'knew',
+    pastSimple: 'knew',
     pastParticiple: 'known'
   },
   {
     title: 'класть',
     infinite: 'lay',
-    simplePast: 'laid',
+    pastSimple: 'laid',
     pastParticiple: 'laid'
   },
   {
     title: 'вести',
     infinite: 'lead',
-    simplePast: 'led',
+    pastSimple: 'led',
     pastParticiple: 'led'
   },
   {
     title: 'оставлять, покидать',
     infinite: 'leave',
-    simplePast: 'left',
+    pastSimple: 'left',
     pastParticiple: 'left'
   },
   {
     title: 'давать взаймы',
     infinite: 'lend',
-    simplePast: 'lent',
+    pastSimple: 'lent',
     pastParticiple: 'lent'
   },
   {
     title: 'позволять',
     infinite: 'let',
-    simplePast: 'let',
+    pastSimple: 'let',
     pastParticiple: 'let'
   },
   {
     title: 'лежать',
     infinite: 'lie',
-    simplePast: 'lay',
+    pastSimple: 'lay',
     pastParticiple: 'lain'
   },
   {
     title: 'зажигать',
     infinite: 'light',
-    simplePast: 'lit',
+    pastSimple: 'lit',
     pastParticiple: 'lit'
   },
   {
     title: 'терять',
     infinite: 'lose',
-    simplePast: 'lost',
+    pastSimple: 'lost',
     pastParticiple: 'lost'
   },
   {
     title: 'сделать',
     infinite: 'make',
-    simplePast: 'made',
+    pastSimple: 'made',
     pastParticiple: 'made'
   },
   {
     title: 'значить',
     infinite: 'mean',
-    simplePast: 'meant',
+    pastSimple: 'meant',
     pastParticiple: 'meant'
   },
   {
     title: 'встречать',
     infinite: 'meet',
-    simplePast: 'met',
+    pastSimple: 'met',
     pastParticiple: 'met'
   },
   {
     title: 'платить',
     infinite: 'pay',
-    simplePast: 'paid',
+    pastSimple: 'paid',
     pastParticiple: 'paid'
   },
   {
     title: 'класть',
     infinite: 'put',
-    simplePast: 'put',
+    pastSimple: 'put',
     pastParticiple: 'put'
   },
   {
     title: 'читать',
     infinite: 'read',
-    simplePast: 'read',
+    pastSimple: 'read',
     pastParticiple: 'read'
   },
   {
     title: 'пересказывать',
     infinite: 'retell',
-    simplePast: 'retold',
+    pastSimple: 'retold',
     pastParticiple: 'retold'
   },
   {
     title: 'ездить верхом',
     infinite: 'ride',
-    simplePast: 'rode',
+    pastSimple: 'rode',
     pastParticiple: 'ridden'
   },
   {
     title: 'звонить',
     infinite: 'ring',
-    simplePast: 'rang',
+    pastSimple: 'rang',
     pastParticiple: 'rung'
   },
   {
     title: 'подниматься',
     infinite: 'rise',
-    simplePast: 'rose',
+    pastSimple: 'rose',
     pastParticiple: 'risen'
   },
   {
     title: 'бежать',
     infinite: 'run',
-    simplePast: 'ran',
+    pastSimple: 'ran',
     pastParticiple: 'run'
   },
   {
     title: 'сказать',
     infinite: 'say',
-    simplePast: 'said',
+    pastSimple: 'said',
     pastParticiple: 'said'
   },
   {
     title: 'видеть',
     infinite: 'see',
-    simplePast: 'saw',
+    pastSimple: 'saw',
     pastParticiple: 'seen'
   },
   {
     title: 'продавать',
     infinite: 'sell',
-    simplePast: 'sold',
+    pastSimple: 'sold',
     pastParticiple: 'sold'
   },
   {
     title: 'посылать',
     infinite: 'send',
-    simplePast: 'sent',
+    pastSimple: 'sent',
     pastParticiple: 'sent'
   },
   {
     title: 'помещать',
     infinite: 'set',
-    simplePast: 'set',
+    pastSimple: 'set',
     pastParticiple: 'set'
   },
   {
     title: 'трясти',
     infinite: 'shake',
-    simplePast: 'shook',
+    pastSimple: 'shook',
     pastParticiple: 'shaken'
   },
   {
     title: 'сиять, блестеть',
     infinite: 'shine',
-    simplePast: 'shone',
+    pastSimple: 'shone',
     pastParticiple: 'shone'
   },
   {
     title: 'стрелять',
     infinite: 'shoot',
-    simplePast: 'shot',
+    pastSimple: 'shot',
     pastParticiple: 'shot'
   },
   {
     title: 'показывать',
     infinite: 'show',
-    simplePast: 'showed',
+    pastSimple: 'showed',
     pastParticiple: 'shown'
   },
   {
     title: 'закрывать',
     infinite: 'shut',
-    simplePast: 'shut',
+    pastSimple: 'shut',
     pastParticiple: 'shut'
   },
   {
     title: 'петь',
     infinite: 'sing',
-    simplePast: 'sang',
+    pastSimple: 'sang',
     pastParticiple: 'sung'
   },
   {
     title: 'сидеть',
     infinite: 'sit',
-    simplePast: 'sat',
+    pastSimple: 'sat',
     pastParticiple: 'sat'
   },
   {
     title: 'спать',
     infinite: 'sleep',
-    simplePast: 'slept',
+    pastSimple: 'slept',
     pastParticiple: 'slept'
   },
   {
     title: 'говорить',
     infinite: 'speak',
-    simplePast: 'spoke',
+    pastSimple: 'spoke',
     pastParticiple: 'spoken'
   },
   {
     title: 'произносить по буквам',
     infinite: 'spell',
-    simplePast: 'spelt',
+    pastSimple: 'spelt',
     pastParticiple: 'spelt'
   },
   {
     title: 'тратить, проводить',
     infinite: 'spend',
-    simplePast: 'spent',
+    pastSimple: 'spent',
     pastParticiple: 'spent'
   },
   {
     title: 'распространять',
     infinite: 'spread',
-    simplePast: 'spread',
+    pastSimple: 'spread',
     pastParticiple: 'spread'
   },
   {
     title: 'стоять',
     infinite: 'stand',
-    simplePast: 'stood',
+    pastSimple: 'stood',
     pastParticiple: 'stood'
   },
   {
     title: 'втыкать',
     infinite: 'stick',
-    simplePast: 'stuck',
+    pastSimple: 'stuck',
     pastParticiple: 'stuck'
   },
   {
     title: 'ударять',
     infinite: 'strike',
-    simplePast: 'struck',
+    pastSimple: 'struck',
     pastParticiple: 'struck'
   },
   {
     title: 'мести',
     infinite: 'sweep',
-    simplePast: 'swept',
+    pastSimple: 'swept',
     pastParticiple: 'swept'
   },
   {
     title: 'плавать',
     infinite: 'swim',
-    simplePast: 'swam',
+    pastSimple: 'swam',
     pastParticiple: 'swum'
   },
   {
     title: 'брать',
     infinite: 'take',
-    simplePast: 'took',
+    pastSimple: 'took',
     pastParticiple: 'taken'
   },
   {
     title: 'учить, обучать',
     infinite: 'teach',
-    simplePast: 'taught',
+    pastSimple: 'taught',
     pastParticiple: 'taught'
   },
   {
     title: 'сказать',
     infinite: 'tell',
-    simplePast: 'told',
+    pastSimple: 'told',
     pastParticiple: 'told'
   },
   {
     title: 'думать',
     infinite: 'think',
-    simplePast: 'thought',
+    pastSimple: 'thought',
     pastParticiple: 'thought'
   },
   {
     title: 'бросать',
     infinite: 'throw',
-    simplePast: 'threw',
+    pastSimple: 'threw',
     pastParticiple: 'thrown'
   },
   {
     title: 'понимать',
     infinite: 'understand',
-    simplePast: 'understood',
+    pastSimple: 'understood',
     pastParticiple: 'understood'
   },
   {
     title: 'просыпаться',
     infinite: 'wake',
-    simplePast: 'woke',
+    pastSimple: 'woke',
     pastParticiple: 'woken'
   },
   {
     title: 'носить (одежду)',
     infinite: 'wear',
-    simplePast: 'wore',
+    pastSimple: 'wore',
     pastParticiple: 'worn'
   },
   {
     title: 'плакать',
     infinite: 'weep',
-    simplePast: 'wept',
+    pastSimple: 'wept',
     pastParticiple: 'wept'
   },
   {
     title: 'побеждать',
     infinite: 'win',
-    simplePast: 'won',
+    pastSimple: 'won',
     pastParticiple: 'won'
   },
   {
     title: 'писать',
     infinite: 'write',
-    simplePast: 'wrote',
+    pastSimple: 'wrote',
     pastParticiple: 'written'
   }
 ]

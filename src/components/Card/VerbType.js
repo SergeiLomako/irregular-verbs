@@ -6,7 +6,7 @@ import { StoreContext } from '../../context/storeContext';
 
 const types = {
   infinite: 'Infinite:',
-  simplePast: 'Simple Past:',
+  pastSimple: 'Past Simple:',
   pastParticiple: 'Past Participle:'
 };
 
@@ -29,7 +29,7 @@ export default ({ type }) => {
   const handleChange = (e) => {
     const { value } = e.target;
     setAnswerValue(type, value);
-    setCorrectAnswerFlag(type, currentVerb[type] === value)
+    setCorrectAnswerFlag(type, currentVerb[type] === value.toLowerCase())
   };
 
   let icon = null;

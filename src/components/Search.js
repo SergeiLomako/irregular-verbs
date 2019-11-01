@@ -20,7 +20,7 @@ export default () => {
     >
       <Form.Control type="search"
                     className="border-primary"
-                    placeholder="Search..."
+                    placeholder="Search verb..."
                     id="search-input"
                     value={search}
                     onChange={handleChange}

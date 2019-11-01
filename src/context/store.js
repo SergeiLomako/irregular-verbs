@@ -25,17 +25,17 @@ export const Store = ({children}) => {
     isVisibleList: false,
     answers: {
       infinite: '',
-      simplePast: '',
+      pastSimple: '',
       pastParticiple: ''
     },
     isCorrectAnswers: {
       infinite: false,
-      simplePast: false,
+      pastSimple: false,
       pastParticiple: false
     },
     isTouched: {
       infinite: false,
-      simplePast: false,
+      pastSimple: false,
       pastParticiple: false
     },
     isVisibleAnswers: false,
