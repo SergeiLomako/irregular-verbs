@@ -2,7 +2,7 @@ export default [
   {
     title: 'быть',
     infinite: 'be',
-    pastSimple: 'was, were',
+    pastSimple: 'was were',
     pastParticiple: 'been'
   },
   {

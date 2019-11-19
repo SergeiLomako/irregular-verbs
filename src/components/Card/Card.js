@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { StoreContext } from '../../context/storeContext';
 import { Button, Card, Container, Row } from 'react-bootstrap';
 import { getNextVerb } from '../../helpers/getNextVerb';
-import VerbType from './VerbType';
+import VerbType from './Type';
 import { MAX_VERB_TITLE_SIZE } from '../../env';
 
 export default () => {

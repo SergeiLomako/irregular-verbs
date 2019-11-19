@@ -23,11 +23,10 @@
 .verb-form {
     height: 30px;
     margin: 5px;
-    padding: 5px;
 }
 
 .verb-elem-text {
-    font-size: 15px;
+    font-size: 13px;
 }
 
 .verb-elem-answer {
@@ -35,7 +34,7 @@
 }
 
 .verb-elem-type {
-    min-width: 110px;
+    min-width: 100px;
 }
 
 .verb-variant-item {
@@ -65,16 +64,14 @@
 }
 
 .answer-input {
-    width: 118px;
+    width: 122px;
     height: 20px;
     color: #007bff;
+    font-size: 15px;
 }
 
 @media (max-width: 540px) {
   #header-text {
       font-size: 20px;
-  }
-  .verb-elem-text {
-      font-size: 13px;
   }
 }

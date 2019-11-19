@@ -1,7 +1,8 @@
-import React, { useContext } from 'react';
-import { FaCheck } from 'react-icons/fa';
-import { GoX } from "react-icons/go";
+import React, { useContext, useEffect, useState } from 'react';
+import { FaCheck, FaVolumeUp } from 'react-icons/fa';
+import { GoX } from 'react-icons/go';
 import { Form } from 'react-bootstrap';
+import { getSound } from '../../helpers/sounds';
 import { StoreContext } from '../../context/storeContext';
 
 const types = {
@@ -20,10 +21,22 @@ export default ({ type }) => {
     answers,
   } = useContext(StoreContext);
 
+  const [soundUrl, setSoundUrl] = useState(null);
+
+  useEffect(() => {
+    getSound(currentVerb[type])
+      .then(blob => setSoundUrl(URL.createObjectURL(blob)));
+  }, [currentVerb, type]);
+
   const handleBlur = () => {
     if (answers[type]) {
       setTouchedFlag(type)
     }
+  };
+
+  const handleSoundClick = async () => {
+    const tmp = new Audio(soundUrl);
+    return tmp.play();
   };
 
   const handleChange = (e) => {
@@ -56,12 +69,15 @@ export default ({ type }) => {
 
       <span className="verb-elem-text verb-elem-type text-left">{ types[type] }</span>
       <Form.Control type="text"
-                    className={`border-${inputBorderColor} answer-input`}
+                    className={`border-${inputBorderColor} answer-input align-center`}
                     onBlur={handleBlur}
                     onChange={handleChange}
                     value={answers[type]}
       />
       {icon}
+      <FaVolumeUp className="ml-auto text-primary"
+                  onClick={handleSoundClick}
+      />
     </div>
   )
 }
