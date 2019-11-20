@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { FaCheck, FaVolumeUp } from 'react-icons/fa';
 import { GoX } from 'react-icons/go';
 import { Form } from 'react-bootstrap';
-import { getSound } from '../../helpers/sounds';
+import { getSound, rewriteSound } from '../../helpers/sounds';
 import { StoreContext } from '../../context/storeContext';
 
 const types = {
@@ -25,7 +25,9 @@ export default ({ type }) => {
 
   useEffect(() => {
     getSound(currentVerb[type])
-      .then(blob => setSoundUrl(URL.createObjectURL(blob)));
+      .then(blob => {
+        setSoundUrl(URL.createObjectURL(blob))
+      })
   }, [currentVerb, type]);
 
   const handleBlur = () => {
@@ -37,7 +39,16 @@ export default ({ type }) => {
   const handleSoundClick = async () => {
     if (soundUrl) {
       const tmp = new Audio(soundUrl);
-      return tmp.play();
+      tmp.play()
+        .catch(() => {
+          rewriteSound(currentVerb[type])
+            .then(blob => {
+              const url = URL.createObjectURL(blob);
+              setSoundUrl(url);
+              const tmp = new Audio(url);
+              tmp.play()
+            })
+        });
     }
   };
 

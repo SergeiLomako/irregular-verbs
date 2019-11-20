@@ -12,3 +12,10 @@ export const getSound = async (verb) => {
   }
   return blob;
 };
+
+export const rewriteSound = async (verb) => {
+  const blob = await fetchAudio(verb);
+  await addToDatabase(verb, blob);
+  return blob;
+};
+

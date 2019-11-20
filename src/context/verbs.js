@@ -240,7 +240,7 @@ export default [
     pastParticiple: 'known'
   },
   {
-    title: 'класть',
+    title: 'ложить',
     infinite: 'lay',
     pastSimple: 'laid',
     pastParticiple: 'laid'
@@ -498,7 +498,7 @@ export default [
     pastParticiple: 'taught'
   },
   {
-    title: 'сказать',
+    title: 'рассказать',
     infinite: 'tell',
     pastSimple: 'told',
     pastParticiple: 'told'
