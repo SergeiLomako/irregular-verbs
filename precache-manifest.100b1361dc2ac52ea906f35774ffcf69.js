@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6bf7c790e0846692e12cc8fa1421844f",
+    "revision": "bae610b8b6316bfb7da87aced846a603",
     "url": "/irregular-verbs/index.html"
   },
   {
-    "revision": "3d5d39608fd7229ca736",
+    "revision": "524da099953174a7affd",
     "url": "/irregular-verbs/static/css/main.0b75e8f5.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/irregular-verbs/static/js/2.8f627e07.chunk.js"
   },
   {
-    "revision": "3d5d39608fd7229ca736",
-    "url": "/irregular-verbs/static/js/main.81e356ee.chunk.js"
+    "revision": "524da099953174a7affd",
+    "url": "/irregular-verbs/static/js/main.1dea8208.chunk.js"
   },
   {
     "revision": "73fc042b94d879f66240",
