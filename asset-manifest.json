@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/irregular-verbs/static/css/main.0b75e8f5.chunk.css",
-    "main.js": "/irregular-verbs/static/js/main.7bdead1f.chunk.js",
-    "main.js.map": "/irregular-verbs/static/js/main.7bdead1f.chunk.js.map",
+    "main.js": "/irregular-verbs/static/js/main.e3edabbc.chunk.js",
+    "main.js.map": "/irregular-verbs/static/js/main.e3edabbc.chunk.js.map",
     "runtime-main.js": "/irregular-verbs/static/js/runtime-main.579a62ad.js",
     "runtime-main.js.map": "/irregular-verbs/static/js/runtime-main.579a62ad.js.map",
     "static/js/2.8f627e07.chunk.js": "/irregular-verbs/static/js/2.8f627e07.chunk.js",
     "static/js/2.8f627e07.chunk.js.map": "/irregular-verbs/static/js/2.8f627e07.chunk.js.map",
     "index.html": "/irregular-verbs/index.html",
-    "precache-manifest.ab3b8c9655d7121535919c96d9503744.js": "/irregular-verbs/precache-manifest.ab3b8c9655d7121535919c96d9503744.js",
+    "precache-manifest.34830b3d7e2ee7a44f64b3992e7dca51.js": "/irregular-verbs/precache-manifest.34830b3d7e2ee7a44f64b3992e7dca51.js",
     "service-worker.js": "/irregular-verbs/service-worker.js",
     "static/css/main.0b75e8f5.chunk.css.map": "/irregular-verbs/static/css/main.0b75e8f5.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.579a62ad.js",
     "static/js/2.8f627e07.chunk.js",
     "static/css/main.0b75e8f5.chunk.css",
-    "static/js/main.7bdead1f.chunk.js"
+    "static/js/main.e3edabbc.chunk.js"
   ]
 }
