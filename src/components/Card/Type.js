@@ -35,8 +35,10 @@ export default ({ type }) => {
   };
 
   const handleSoundClick = async () => {
-    const tmp = new Audio(soundUrl);
-    return tmp.play();
+    if (soundUrl) {
+      const tmp = new Audio(soundUrl);
+      return tmp.play();
+    }
   };
 
   const handleChange = (e) => {
