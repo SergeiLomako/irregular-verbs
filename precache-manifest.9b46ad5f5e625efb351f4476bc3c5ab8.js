@@ -1,18 +1,18 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5bc48ad558199b48d2174e5f64d563c6",
+    "revision": "acb0951b58ab78c01dfc00c445be14ba",
     "url": "/irregular-verbs/index.html"
   },
   {
-    "revision": "f305137b64184d123074",
-    "url": "/irregular-verbs/static/css/main.495b920b.chunk.css"
+    "revision": "c99ccc2bf27d177bc2b3",
+    "url": "/irregular-verbs/static/css/main.e35596e0.chunk.css"
   },
   {
     "revision": "4bac70e4ad2d6da68cdc",
     "url": "/irregular-verbs/static/js/2.1195cc87.chunk.js"
   },
   {
-    "revision": "f305137b64184d123074",
+    "revision": "c99ccc2bf27d177bc2b3",
     "url": "/irregular-verbs/static/js/main.41c7033d.chunk.js"
   },
   {
