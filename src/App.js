@@ -1,18 +1,19 @@
 import React from 'react';
 import './App.css';
 import { Store } from './context/store';
-import VerbCard from './components/Card/Card';
-import VerbList from './components/List';
-import VerbHeader from './components/Header';
-import Search from './components/Search';
+import Learning from './components/Learning';
+import Exam from './components/Exam';
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
 function App() {
   return (
     <Store>
-      <VerbHeader />
-      <Search />
-      <VerbCard />
-      <VerbList />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Learning} />
+          <Route exact path="/exam" component={Exam} />
+        </Switch>
+      </BrowserRouter>
     </Store>
   );
 }

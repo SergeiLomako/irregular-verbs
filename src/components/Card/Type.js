@@ -8,10 +8,11 @@ import { StoreContext } from '../../context/storeContext';
 const types = {
   infinite: 'Infinite:',
   pastSimple: 'Past Simple:',
-  pastParticiple: 'Past Participle:'
+  pastParticiple: 'Past Participle:',
+  verb: 'Verb'
 };
 
-export default ({ type }) => {
+export default ({ type, answer, sound }) => {
   const {
     setCorrectAnswerFlag,
     isCorrectAnswers,
@@ -24,11 +25,13 @@ export default ({ type }) => {
   const [soundUrl, setSoundUrl] = useState(null);
 
   useEffect(() => {
-    getSound(currentVerb[type])
-      .then(blob => {
-        setSoundUrl(URL.createObjectURL(blob))
-      })
-  }, [currentVerb, type]);
+    if (sound) {
+      getSound(currentVerb[type])
+        .then(blob => {
+          setSoundUrl(URL.createObjectURL(blob))
+        })
+    }
+  }, [currentVerb, type, sound]);
 
   const handleBlur = () => {
     if (answers[type]) {
@@ -39,16 +42,14 @@ export default ({ type }) => {
   const handleSoundClick = async () => {
     if (soundUrl) {
       const tmp = new Audio(soundUrl);
-      tmp.play()
-        .catch(() => {
-          rewriteSound(currentVerb[type])
-            .then(blob => {
-              const url = URL.createObjectURL(blob);
-              setSoundUrl(url);
-              const tmp = new Audio(url);
-              tmp.play()
-            })
-        });
+      tmp.play().catch(() => {
+        rewriteSound(currentVerb[type]).then(blob => {
+          const url = URL.createObjectURL(blob);
+          setSoundUrl(url);
+          const tmp = new Audio(url);
+          tmp.play()
+        })
+      });
     }
   };
 
@@ -87,10 +88,12 @@ export default ({ type }) => {
                     onChange={handleChange}
                     value={answers[type]}
       />
-      {icon}
+      {answer && icon}
+      {sound &&
       <FaVolumeUp className="ml-auto text-primary"
                   onClick={handleSoundClick}
       />
+      }
     </div>
   )
 }

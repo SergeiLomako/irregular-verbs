@@ -1,34 +1,37 @@
 import React, { useContext } from 'react';
 import { StoreContext } from '../context/storeContext';
-import { Button, Navbar } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import logo from '../logo.png';
 
 
 export default () => {
-  const { toggleVerbsListVisibility, isVisibleList, headerRef } = useContext(StoreContext);
+  const { headerRef } = useContext(StoreContext);
   return (
-    <Navbar className="d-flex align-items-center flex-column"
-            variant="light"
-            bg="light"
-            ref={headerRef}
-    >
-      <Navbar.Brand>
-        <img
-          alt="logo"
-          src={logo}
-          className="align-center"
-        />
-        <span className="ml-2 font-italic align-center"
-              id="header-text">
-              Learning irregular verbs
-            </span>
-      </Navbar.Brand>
-      <Button variant="outline-primary"
-              type="button"
-              onClick={toggleVerbsListVisibility}
+    <>
+      <Navbar className="d-flex align-items-center flex-column mb-2"
+              variant="light"
+              bg="light"
+              ref={headerRef}
       >
-        { isVisibleList ? 'Hide verbs' : 'Show verbs' }
-      </Button>
-    </Navbar>
+        <Navbar.Brand>
+          <img
+            alt="logo"
+            src={logo}
+            className="align-center"
+          />
+          <span className="ml-2 font-italic align-center"
+                id="header-text">
+                Learning irregular verbs
+              </span>
+        </Navbar.Brand>
+      </Navbar>
+      <div className="d-flex justify-content-between align-items-center m-auto"
+           id="link-list"
+      >
+        <Link to="/">Learning</Link>
+        <Link to="/exam">Exam</Link>
+      </div>
+    </>
   )
 }

@@ -40,9 +40,9 @@ export default () => {
             <span id="current-verb" className="text-uppercase text-center" style={style}>{ currentVerb.title }</span>
           </Card.Header>
           <Card.Body className="d-flex align-items-center flex-column">
-            <VerbType type="infinite" />
-            <VerbType type="pastSimple" />
-            <VerbType type="pastParticiple" />
+            <VerbType type="infinite" sound={true} answer={true} />
+            <VerbType type="pastSimple" sound={true} answer={true} />
+            <VerbType type="pastParticiple" sound={true} answer={true} />
             <div id="answers-block">
               <Button variant="primary"
                       className="mt-2"
