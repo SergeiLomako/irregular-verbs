@@ -8,10 +8,10 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 function App() {
   return (
     <Store>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Switch>
           <Route exact path="/" component={Learning} />
-          <Route exact path="/exam" component={Exam} />
+          <Route path="/exam" component={Exam} />
         </Switch>
       </BrowserRouter>
     </Store>
