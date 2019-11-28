@@ -5,6 +5,7 @@
   "homepage": "https://sergeilomako.github.io/irregular-verbs/",
   "dependencies": {
     "dexie": "^2.0.4",
+    "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-bootstrap": "^1.0.0-beta.14",
     "react-dom": "^16.11.0",

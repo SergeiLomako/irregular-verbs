@@ -8,7 +8,7 @@ export default () => {
     const value = e.target.value;
     setSearchValue(value);
     if (value.length > 2) {
-      const currentVerb = verbs.find(({ title }) => title.includes(value));
+      const currentVerb = verbs.find(({ verb }) => verb.includes(value));
       if (currentVerb) {
         setVerb(currentVerb)
       }

@@ -6,7 +6,7 @@ import logo from '../logo.png';
 
 
 export default () => {
-  const { headerRef } = useContext(StoreContext);
+  const { headerRef, resetState } = useContext(StoreContext);
   return (
     <>
       <Navbar className="d-flex align-items-center flex-column mb-2"
@@ -29,8 +29,8 @@ export default () => {
       <div className="d-flex justify-content-between align-items-center m-auto"
            id="link-list"
       >
-        <Link to="/">Learning</Link>
-        <Link to="/exam">Exam</Link>
+        <Link to="/" onClick={resetState}>Learning</Link>
+        <Link to="/exam" onClick={resetState}>Exam</Link>
       </div>
     </>
   )

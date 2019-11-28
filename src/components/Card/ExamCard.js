@@ -2,18 +2,28 @@ import React, { useContext } from 'react';
 import { StoreContext } from '../../context/storeContext';
 import { Button, Card, Container, Row } from 'react-bootstrap';
 import { getNextVerb } from '../../helpers/getNextVerb';
-import VerbType from './Type';
+import { ExamType } from './Type/ExamType';
+import { TYPES, MAX_RESULT } from '../../env';
 
 export default () => {
   const {
-    setNextVerb,
+    setExamNextVerb,
     shownVerbs,
-    verbs
+    finishExam,
+    resetState,
+    verbs,
+    exam: { showResult, questionCount, points }
   } = useContext(StoreContext);
 
-  const handleNextButtonClick = (e) => {
+  const handleClick = (e) => {
     e.preventDefault();
-    return setNextVerb(getNextVerb(verbs, shownVerbs))
+    if (!showResult) {
+      questionCount > 1
+       ? setExamNextVerb(getNextVerb(verbs, shownVerbs))
+       : finishExam()
+    } else {
+      resetState();
+    }
   };
 
   return (
@@ -29,16 +39,23 @@ export default () => {
             </span>
           </Card.Header>
           <Card.Body className="d-flex align-items-center flex-column">
-            <VerbType type="verb" sound={false} answer={false} />
-            <VerbType type="infinite" sound={false} answer={false} />
-            <VerbType type="pastSimple" sound={false} answer={false} />
-            <VerbType type="pastParticiple" sound={false} answer={false} />
+            { showResult
+              ? <>
+                  <span className="text-primary text-uppercase mb-2">
+                    your result:
+                  </span>
+                  <span className={`text-${points > MAX_RESULT / 2 ? 'success' : 'warning'}`}>
+                    { `${points} / ${MAX_RESULT}` }
+                  </span>
+                </>
+              : TYPES.map((type, index) => <ExamType key={index} type={type} />)
+            }
           </Card.Body>
           <Card.Footer>
             <Button variant="primary"
-                    onClick={ handleNextButtonClick }
+                    onClick={ handleClick }
             >
-              Next
+              { questionCount ? 'Next' : 'Try again' }
             </Button>
           </Card.Footer>
         </Card>
@@ -46,3 +63,4 @@ export default () => {
     </Container>
   )
 }
+

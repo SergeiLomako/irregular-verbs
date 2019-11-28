@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import { StoreContext } from '../../context/storeContext';
 import { Button, Card, Container, Row } from 'react-bootstrap';
 import { getNextVerb } from '../../helpers/getNextVerb';
-import VerbType from './Type';
-import { MAX_VERB_TITLE_SIZE } from '../../env';
+import { LearningType } from './Type/LearningType';
+import { MAX_VERB_TITLE_SIZE, TYPES } from '../../env';
 
 export default () => {
   const {
@@ -25,7 +25,7 @@ export default () => {
     return toggleAnswerVisibility()
   };
 
-  const style = currentVerb.title.length > MAX_VERB_TITLE_SIZE
+  const style = currentVerb.verb.length > MAX_VERB_TITLE_SIZE
     ? { fontSize: '20px' }
     : {};
 
@@ -37,12 +37,12 @@ export default () => {
               border="primary"
         >
           <Card.Header id="card-header" className="d-flex align-items-center justify-content-center">
-            <span id="current-verb" className="text-uppercase text-center" style={style}>{ currentVerb.title }</span>
+            <span id="current-verb" className="text-uppercase text-center" style={style}>{ currentVerb.verb }</span>
           </Card.Header>
           <Card.Body className="d-flex align-items-center flex-column">
-            <VerbType type="infinite" sound={true} answer={true} />
-            <VerbType type="pastSimple" sound={true} answer={true} />
-            <VerbType type="pastParticiple" sound={true} answer={true} />
+            { TYPES.filter(type => type !== 'verb')
+                .map((type, index) => <LearningType key={index} type={type} />)
+            }
             <div id="answers-block">
               <Button variant="primary"
                       className="mt-2"

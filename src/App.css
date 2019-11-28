@@ -74,6 +74,14 @@
     font-size: 15px;
 }
 
+.short-input {
+    width: 122px;
+}
+
+.long-input {
+    width: 158px;
+}
+
 #link-list {
     width: 310px;
     height: 60px;
