@@ -4,7 +4,7 @@ import { Form } from 'react-bootstrap';
 import { TYPES } from "../../../env";
 
 const types = {
-  infinite: 'Infinite:',
+  infinitive: 'Infinitive:',
   pastSimple: 'Past Simple:',
   pastParticiple: 'Past Participle:',
   verb: 'Verb'

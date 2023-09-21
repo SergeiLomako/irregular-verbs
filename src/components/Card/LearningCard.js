@@ -54,7 +54,7 @@ export default () => {
               <div className="d-flex align-items-center justify-content-between mt-2">
                 { isVisibleAnswers && (
                   <>
-                    <span className="text-primary">{currentVerb.infinite}</span>
+                    <span className="text-primary">{currentVerb.infinitive}</span>
                     <span className="text-primary">{currentVerb.pastSimple}</span>
                     <span className="text-primary">{currentVerb.pastParticiple}</span>
                   </>

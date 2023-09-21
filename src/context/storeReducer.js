@@ -17,7 +17,7 @@ import {generateRandomVisibleType, getRandomInt} from '../helpers/getNextVerb';
 const resetAnswers = {
   answers: {
     verb: '',
-    infinite: '',
+    infinitive: '',
     pastSimple: '',
     pastParticiple: ''
   }
@@ -26,7 +26,7 @@ const resetAnswers = {
 const resetCorrectAnswers = {
   isCorrectAnswers: {
     verb: false,
-    infinite: false,
+    infinitive: false,
     pastSimple: false,
     pastParticiple: false
   }
